@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #fff;
+    background-color: #16161d;
+    letter-spacing: 1.5px;
+}
+
+main {
+    padding: 3rem 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.jarred, .lolo {
+    color: #16161d;
+    background-color: #fff;
+    padding: 1.5rem 3rem;
+    border-radius: 0.5rem;
+}
+
+.btn {
+    padding: 0.8rem 3rem;
+    background-color: #fff;
+    color: #16161d;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: #16161d 2px solid;
+    font-weight: 700;
+    border-radius: 0.4rem;
+}
+.btn:hover {
+    background-color: #16161d;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.names {
+    text-align: center;
+    margin-top: 0.8rem;
+    border-bottom: #16161d solid 1px;
+    font-weight: 00;
+}
+
+.church-service {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.8rem;
+    font-weight: 300;
+}
+
+@media (max-width: 450px) {
+    main {
+        padding: 3rem 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .church-service {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 3rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .church-service {
+        text-align: center;
+    }
+}
+
+@media (max-width: 750px) {
+    main {
+        padding: 3rem 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    .church-service {
+        text-align: center;
+    }
+}
