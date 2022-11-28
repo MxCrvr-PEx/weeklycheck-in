@@ -38,14 +38,14 @@ btn.addEventListener('click', () => {
 function getJarredNames() {
     for (const name of firstHalf) {
         jarred.innerHTML += `<div class="names"<li>${name}</li></div>`;
-        jarred.innerHTML += `${randomDate('11/22/2022', '11/26/2022')}`;
+        jarred.innerHTML += `${randomDate('11/28/2022', '12/02/2022')}`;
     }
 };
 
 function getLoloNames() {
     for (const name of secondHalf) {
         lolo.innerHTML += `<div class="names"<li>${name}</li></div>`;
-        lolo.innerHTML += `${randomDate('11/22/2022', '11/27/2022')}`;
+        lolo.innerHTML += `${randomDate('11/28/2022', '12/02/2022')}`;
     };
 };
 
