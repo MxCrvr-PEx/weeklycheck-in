@@ -88,14 +88,14 @@ const duties = [
     "Kitchen & Pantry",
 ]
 
+const dutiesList = document.getElementById('duties')
 function getDuty() {
-    const dutiesList = document.getElementById('duties')
     for (const duty of duties) {
         dutiesList.innerHTML += `<h4>${duty}</h4>`
     }
 }
-const dutyNames = document.getElementById('duty-names')
 
+const dutyNames = document.getElementById('duty-names')
 function getDuties() {
     for (const name of namesShuffled) {
         dutyNames.innerHTML += `<p>${name}</p>`;
@@ -105,6 +105,8 @@ function getDuties() {
 backText.addEventListener('click', () => {
     btn.style.display = 'block';
     btn2.style.display = 'block';
-    container.style.display = 'none'
-    container2.style.display = 'none'
+    container.style.display = 'none';
+    container2.style.display = 'none';
+    dutiesList.innerHTML = ''
+    dutyNames.innerHTML = ''
 })
