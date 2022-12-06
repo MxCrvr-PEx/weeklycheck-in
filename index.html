@@ -4,30 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekly Check In</title>
+    <title>House Stuff</title>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
 </head>
 <body>
+    <header>
+        <nav>
+            <p class="back-text" id="back-text">Back</p>
+        </nav>
+    </header>
     <main>
-        <h1>Weekly Check-In</h1>
+        <h1>House Stuff</h1>
+        <!-- Check In -->
         <div class="container" id="container">
             <div id="jarred" class="jarred">
                 <h3>Jarred</h3>
             </div>
 
-            <div id="lolo" class="lolo">
-                <h3>Lolo</h3>
+            <div id="don" class="don">
+                <h3>Don</h3>
             </div>
         </div>
 
-        <div id="church-service" class="church-service">
-            <p id="am"></p>
-            <p id="pm"></p>
+        <!-- Duties -->
+        <div class="duties-container" id="container2">
+            <div class="duties" id="duties"></div>
+            <div class="duty-names" id="duty-names"></div>
+            
         </div>
 
-        <button id="btn" class="btn">Generate</button>
+        <button id="btn2" class="btn">Duties</button>
+        <button id="btn" class="btn">Weekly Check-in</button>
 
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
 </body>
 </html>

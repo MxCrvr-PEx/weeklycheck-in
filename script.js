@@ -1,9 +1,12 @@
 "use strict"
 
 const btn = document.getElementById('btn');
+const btn2 = document.getElementById('btn2');
 const jarred = document.getElementById('jarred');
-const lolo = document.getElementById('lolo');
+const don = document.getElementById('don');
 const container = document.getElementById('container');
+const container2 = document.getElementById('container2');
+const backText = document.getElementById('back-text');
 
 const houseNames = [
     "Carlos",
@@ -12,13 +15,12 @@ const houseNames = [
     "Mitch",
     "Reece",
     "Warren",
-    "Don",
     "Brenden",
-    "Phil",
     "Ross",
     "Kyle",
     "Mpho",
     "Adam",
+    "Linden",
     "Ed"
 ];
 const namesShuffled = houseNames.sort(() => Math.random() - 0.5);
@@ -26,29 +28,27 @@ const half = Math.ceil(namesShuffled.length / 2);
 const firstHalf = namesShuffled.slice(0, half);
 const secondHalf = namesShuffled.slice(half);
 
-
+// Weekly Check-in
 btn.addEventListener('click', () => {
     btn.style.display = 'none';
+    btn2.style.display = 'none';
     container.style.display = 'flex';
     getJarredNames();
-    getLoloNames();
+    getDonNames();
     getChurchService();
 });
-
 function getJarredNames() {
     for (const name of firstHalf) {
         jarred.innerHTML += `<div class="names"<li>${name}</li></div>`;
         jarred.innerHTML += `${randomDate('11/28/2022', '12/02/2022')}`;
     }
 };
-
-function getLoloNames() {
+function getDonNames() {
     for (const name of secondHalf) {
-        lolo.innerHTML += `<div class="names"<li>${name}</li></div>`;
-        lolo.innerHTML += `${randomDate('11/28/2022', '12/02/2022')}`;
+        don.innerHTML += `<div class="names"<li>${name}</li></div>`;
+        don.innerHTML += `${randomDate('11/28/2022', '12/02/2022')}`;
     };
 };
-
 function randomDate(date1, date2){
     function randomValueBetween(min, max) {
       return Math.random() * (max - min) + min;
@@ -65,12 +65,46 @@ function randomDate(date1, date2){
     }
 };
 
+// Duties
+btn2.addEventListener('click', () => {
+    btn.style.display = 'none';
+    btn2.style.display = 'none';
+    container2.style.display = 'grid';
+    getDuty()
+    getDuties()
+})
 
-function getChurchService() {
-    const am = document.getElementById('am');
-    const pm= document.getElementById('pm');
-    am.innerText += `Church (AM): ${firstHalf[3]}, ${firstHalf[2]}, ${firstHalf[4]}`
-    pm.innerText += `Church (PM): ${secondHalf[3]}, ${secondHalf[2]}, ${secondHalf[4]}`
+const duties = [
+    "Lounge",
+    "Passageway & Staircases",
+    "Dining Room",
+    "Library",
+    "Training Room",
+    "Entertainment Area",
+    "Garden",
+    "Pool",
+    "Outside Walkways",
+    "Bin Area",
+    "Kitchen & Pantry",
+]
+
+function getDuty() {
+    const dutiesList = document.getElementById('duties')
+    for (const duty of duties) {
+        dutiesList.innerHTML += `<h4>${duty}</h4>`
+    }
+}
+const dutyNames = document.getElementById('duty-names')
+
+function getDuties() {
+    for (const name of namesShuffled) {
+        dutyNames.innerHTML += `<p>${name}</p>`;
+    }
 }
 
-
+backText.addEventListener('click', () => {
+    btn.style.display = 'block';
+    btn2.style.display = 'block';
+    container.style.display = 'none'
+    container2.style.display = 'none'
+})

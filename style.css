@@ -14,7 +14,7 @@ body {
 }
 
 main {
-    padding: 3rem 6rem;
+    padding: 0.5rem 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,6 +32,20 @@ h3 {
     text-align: center;
 }
 
+nav {
+    padding: 2rem 6rem;
+}
+
+.back-text {
+    text-decoration: underline;
+    cursor: pointer;
+    text-align: center;
+    display: inline;
+}
+.back-text:hover {
+    color: #cccccc82;
+}
+
 .container {
     display: none;
     justify-content: center;
@@ -39,7 +53,14 @@ h3 {
     gap: 3rem;
 }
 
-.jarred, .lolo {
+.duties-container {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+}
+
+.jarred, .don {
     color: #16161d;
     background-color: #fff;
     padding: 1.5rem 3rem;
@@ -54,6 +75,7 @@ h3 {
     cursor: pointer;
     border: #16161d 2px solid;
     font-weight: 700;
+    border: 1px solid #fff;
     border-radius: 0.4rem;
 }
 .btn:hover {
@@ -100,10 +122,6 @@ h3 {
         align-items: center;
         gap: 3rem;
     }
-
-    .church-service {
-        text-align: center;
-    }
 }
 
 @media (max-width: 600px) {
@@ -126,10 +144,6 @@ h3 {
         align-items: center;
         gap: 1.5rem;
     }
-
-    .church-service {
-        text-align: center;
-    }
 }
 
 @media (max-width: 750px) {
@@ -151,9 +165,5 @@ h3 {
         justify-content: center;
         align-items: center;
         gap: 2.5rem;
-    }
-
-    .church-service {
-        text-align: center;
     }
 }
